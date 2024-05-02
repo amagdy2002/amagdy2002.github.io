@@ -1,10 +1,18 @@
 <html>
 	<head>
 		<title>My HTML Page</title>
+		<script>
+			let clickCount = 0;
+			function countClicks() {
+				clickCount++;
+				document.getElementById("click-message").innerHTML = `Button clicked ${clickCount} times!`;
+			}
+		</script>
 	</head>
 	<body>
 		<h1>Welcome to My HTML Page</h1>
-		<button>Click Me!</button>
+		<button onclick="countClicks()">Click Me!</button>
+		<p id="click-message"></p>
 	</body>
 </html>
 
